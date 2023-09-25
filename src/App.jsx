@@ -1,17 +1,22 @@
 import { useState, useEffect } from "react";
-import { checkTheme } from "./utils/helpers";
+// import { checkTheme } from "./utils/helpers";
 import Navbar from "./components/Navbar";
 
 function App() {
-  const [theme, setTheme] = useState(Boolean(localStorage.getItem("theme")));
+  const [theme, setTheme] = useState(localStorage.getItem("theme"));
 
   useEffect(() => {
-    checkTheme(theme);
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
   }, [theme]);
 
   const handleThemeSwitch = () => {
-    setTheme(!theme);
-    localStorage.setItem("theme", theme);
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   return (

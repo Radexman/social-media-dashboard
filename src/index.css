@@ -3,6 +3,22 @@
 @tailwind components;
 @tailwind utilities;
 
+nav {
+  @apply dark:bg-neutral-darkTheme-veryDarkBlueBgTop bg-neutral-lightTheme-lightGrayishBlue flex h-52 items-start justify-center rounded-b-[2em] p-6 md:p-0 md:pt-10;
+}
+
+h1 {
+  @apply text-neutral-lightTheme-veryDarkBlue dark:text-neutral-darkTheme-white text-2xl font-bold;
+}
+
+.total-followers {
+  @apply text-neutral-lightTheme-darkGrayishBlue dark:text-neutral-darkTheme-desaturatedBlue text-sm font-bold;
+}
+
+.darkmode-wrapper {
+  @apply dark:text-neutral-darkTheme-desaturatedBlue text-neutral-lightTheme-darkGrayishBlue mt-5 flex justify-between gap-2;
+}
+
 .line {
   @apply dark:bg-neutral-darkTheme-desaturatedBlue bg-neutral-darkTheme-darkDesaturatedBlue mt-8 block h-[1px] md:hidden;
 }

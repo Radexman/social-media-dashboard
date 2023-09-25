@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-// import { checkTheme } from "./utils/helpers";
 import Navbar from "./components/Navbar";
+import StatsTotal from "./components/StatsTotal";
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme"));
@@ -22,6 +22,7 @@ function App() {
   return (
     <div className="bg-neutral-lightTheme-white dark:bg-neutral-darkTheme-veryDarkBlueBg min-h-screen">
       <Navbar handleThemeSwitch={handleThemeSwitch} />
+      <StatsTotal />
     </div>
   );
 }

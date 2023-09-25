@@ -3,7 +3,7 @@ import { checkTheme } from "./utils/helpers";
 import Navbar from "./components/Navbar";
 
 function App() {
-  const [theme, setTheme] = useState(localStorage.getItem("theme"));
+  const [theme, setTheme] = useState(Boolean(localStorage.getItem("theme")));
 
   useEffect(() => {
     checkTheme(theme);

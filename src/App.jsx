@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import utils from "./utils/helpers";
 import Navbar from "./components/Navbar";
 import StatsTotal from "./components/StatsTotal";
 import statsTotalData from "./data/stats-total";
@@ -12,13 +13,7 @@ function App() {
   }, [mainStats]);
 
   useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
+    utils.checktheme(theme);
   }, [theme]);
 
   const handleThemeSwitch = () => {
@@ -27,7 +22,7 @@ function App() {
 
   return (
     <div className="bg-neutral-lightTheme-white dark:bg-neutral-darkTheme-veryDarkBlueBg min-h-screen">
-      <Navbar handleThemeSwitch={handleThemeSwitch} />
+      <Navbar handleThemeSwitch={handleThemeSwitch} mainStats={mainStats} />
       <StatsTotal mainStats={mainStats} />
     </div>
   );

@@ -20,7 +20,7 @@ h1 {
 }
 
 .line {
-  @apply dark:bg-neutral-darkTheme-desaturatedBlue bg-neutral-darkTheme-darkDesaturatedBlue mt-8 block h-[1px] md:hidden;
+  @apply dark:bg-neutral-darkTheme-desaturatedBlue bg-neutral-darkTheme-darkDesaturatedBlue mt-6 block h-[1px] md:hidden;
 }
 
 /* Toggle Button Styling */

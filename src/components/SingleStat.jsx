@@ -1,23 +1,13 @@
+import utils from "../utils/helpers";
+
 const SingleStat = ({ stat }) => {
   const { media, user, followers, newFollowers, surplus } = stat;
-
-  const getBackgroundColor = () => {
-    if (media === "facebook") {
-      return "hsl(208, 92%, 53%)";
-    } else if (media === "twitter") {
-      return "hsl(203, 89%, 53%)";
-    } else if (media === "instagram") {
-      return "linear-gradient(90deg, rgba(253,196,104,1) 0%, rgba(223,73,150,1) 100%);";
-    } else if (media === "youtube") {
-      return "hsl(348, 97%, 53%)";
-    }
-  };
 
   return (
     <div className="dark:bg-neutral-darkTheme-darkDesaturatedBlue bg-neutral-lightTheme-lightGrayishBlue h-56 rounded-lg">
       <div
         style={{
-          background: getBackgroundColor(),
+          background: utils.getBackgroundColor(media),
         }}
         className={`bg-primary-${media} h-2 rounded-t-xl`}
       ></div>
@@ -25,14 +15,14 @@ const SingleStat = ({ stat }) => {
         <div className="flex gap-2">
           <img src={`src/images/icon-${media}.svg`} alt="facebook" />
           <p className="text-neutral-darkTheme-darkDesaturatedBlue dark:text-neutral-lightTheme-lightGrayishBlue text-sm">
-            @nathanf
+            {user}
           </p>
         </div>
         <div className="flex flex-col items-center">
-          <p className="text-neutral-lightTheme-veryDarkBlue text-6xl font-bold">
-            {followers}
+          <p className="text-neutral-lightTheme-veryDarkBlue dark:text-neutral-lightTheme-lightGrayishBlue text-6xl font-bold">
+            {utils.addK(followers)}
           </p>
-          <p className="text-neutral-lightTheme-darkGrayishBlue text-xl uppercase tracking-widest">
+          <p className="text-neutral-lightTheme-darkGrayishBlue dark:text-neutral-darkTheme-desaturatedBlue text-lg uppercase tracking-widest">
             Followers
           </p>
         </div>

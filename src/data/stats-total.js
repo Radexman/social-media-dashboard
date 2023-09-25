@@ -1,4 +1,4 @@
-const statsTotal = [
+const statsTotalData = [
   {
     id: 1,
     media: "facebook",
@@ -33,4 +33,4 @@ const statsTotal = [
   },
 ];
 
-export default statsTotal;
+export default statsTotalData;

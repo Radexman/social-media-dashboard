@@ -12,7 +12,7 @@ export default {
           twitter: "hsl(203, 89%, 53%)",
           instagram: {
             start: "hsl(37, 97%, 70%)",
-            end: "hsl(329, 70%%, 58%)",
+            end: "hsl(329, 70%, 58%)",
           },
           youtube: "hsl(348, 97%, 53%)",
           darkTheme: {

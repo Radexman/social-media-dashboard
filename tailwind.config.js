@@ -28,13 +28,13 @@ export default {
         neutral: {
           darkTheme: {
             veryDarkBlueBg: "hsl(230, 17%, 14%)",
-            vertDarkBlueBgTop: "hsl(232, 19%, 15%)",
+            veryDarkBlueBgTop: "hsl(232, 19%, 15%)",
             darkDesaturatedBlue: "hsl(228, 28%, 20%)",
             desaturatedBlue: "hsl(228, 34%, 66%)",
             white: "hsl(0, 0%, 100%)",
           },
           lightTheme: {
-            white: "hsl(0, 0, 100%)",
+            white: "hsl(0, 0%, 100%)",
             veryPaleBlue: "hsl(225, 100%, 98%)",
             lightGrayishBlue: "hsl(227, 47%, 96%)",
             darkGrayishBlue: "hsl(228, 12%, 44%)",

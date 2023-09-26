@@ -9,7 +9,7 @@ const StatsToday = ({ todayStats }) => {
       </h2>
       <div className="stats-wrapper">
         {todayStats.map((stat) => {
-          const { id } = todayStats;
+          const { id } = stat;
           return <SingleToday key={id} stat={stat} />;
         })}
       </div>

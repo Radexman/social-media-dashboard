@@ -13,7 +13,7 @@ const statsTodayData = [
     activityType: "Likes",
     followers: 52,
     ratio: "2%",
-    surplus: false,
+    surplus: true,
   },
   {
     id: 3,

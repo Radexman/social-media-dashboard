@@ -28,11 +28,11 @@ h1 {
 }
 
 .single-main-stat-container {
-  @apply h-56 rounded-lg bg-neutral-lightTheme-lightGrayishBlue dark:bg-neutral-darkTheme-darkDesaturatedBlue;
+  @apply h-56 cursor-pointer rounded-lg bg-neutral-lightTheme-lightGrayishBlue duration-200 hover:bg-slate-200 dark:bg-neutral-darkTheme-darkDesaturatedBlue dark:hover:bg-slate-600;
 }
 
 .single-today-stat-container {
-  @apply flex h-44 items-center justify-between rounded-lg bg-neutral-lightTheme-lightGrayishBlue p-6 dark:bg-neutral-darkTheme-darkDesaturatedBlue;
+  @apply flex h-44 cursor-pointer items-center justify-between rounded-lg bg-neutral-lightTheme-lightGrayishBlue p-6 duration-200 hover:bg-slate-200 dark:bg-neutral-darkTheme-darkDesaturatedBlue dark:hover:bg-neutral-lightTheme-darkGrayishBlue;
 }
 
 .user-name {

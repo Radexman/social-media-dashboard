@@ -5,7 +5,7 @@ const SingleStat = ({ stat }) => {
   const { media, user, followers, newFollowers, surplus } = stat;
 
   return (
-    <div className="h-56 rounded-lg bg-neutral-lightTheme-lightGrayishBlue dark:bg-neutral-darkTheme-darkDesaturatedBlue">
+    <div className="single-stat-container">
       <div
         style={{
           background: utils.getBackgroundColor(media),
@@ -15,17 +15,11 @@ const SingleStat = ({ stat }) => {
       <div className="flex flex-col items-center space-y-5 p-4">
         <div className="flex gap-2">
           <img src={`src/images/icon-${media}.svg`} alt="facebook" />
-          <p className="text-sm text-neutral-darkTheme-darkDesaturatedBlue dark:text-neutral-lightTheme-lightGrayishBlue">
-            {user}
-          </p>
+          <p className="user-name">{user}</p>
         </div>
         <div className="flex flex-col items-center">
-          <p className="text-6xl font-bold text-neutral-lightTheme-veryDarkBlue dark:text-neutral-lightTheme-lightGrayishBlue">
-            {utils.addK(followers)}
-          </p>
-          <p className="text-lg uppercase tracking-widest text-neutral-lightTheme-darkGrayishBlue dark:text-neutral-darkTheme-desaturatedBlue">
-            Followers
-          </p>
+          <p className="followers-count">{utils.addK(followers)}</p>
+          <p className="followers-name">Followers</p>
         </div>
         <div className="flex items-center gap-2">
           <img

@@ -4,7 +4,7 @@ import utils from "../utils/helpers";
 const Navbar = ({ handleThemeSwitch, mainStats }) => {
   return (
     <nav>
-      <div className="container mx-auto flex flex-col justify-between md:flex-row">
+      <div className="navbar-inner-wrapper">
         <div className="flex flex-col items-start">
           <h1>Social Media Dashboard</h1>
           <p className="total-followers">

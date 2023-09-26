@@ -26,6 +26,7 @@ const Navbar = ({ handleThemeSwitch, mainStats }) => {
 
 Navbar.propTypes = {
   handleThemeSwitch: PropTypes.func.isRequired,
+  mainStats: PropTypes.array.isRequired,
 };
 
 export default Navbar;

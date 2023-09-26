@@ -1,10 +1,11 @@
+import PropTypes from "prop-types";
 import utils from "../utils/helpers";
 
 const SingleStat = ({ stat }) => {
   const { media, user, followers, newFollowers, surplus } = stat;
 
   return (
-    <div className="dark:bg-neutral-darkTheme-darkDesaturatedBlue bg-neutral-lightTheme-lightGrayishBlue h-56 rounded-lg">
+    <div className="h-56 rounded-lg bg-neutral-lightTheme-lightGrayishBlue dark:bg-neutral-darkTheme-darkDesaturatedBlue">
       <div
         style={{
           background: utils.getBackgroundColor(media),
@@ -14,15 +15,15 @@ const SingleStat = ({ stat }) => {
       <div className="flex flex-col items-center space-y-5 p-4">
         <div className="flex gap-2">
           <img src={`src/images/icon-${media}.svg`} alt="facebook" />
-          <p className="text-neutral-darkTheme-darkDesaturatedBlue dark:text-neutral-lightTheme-lightGrayishBlue text-sm">
+          <p className="text-sm text-neutral-darkTheme-darkDesaturatedBlue dark:text-neutral-lightTheme-lightGrayishBlue">
             {user}
           </p>
         </div>
         <div className="flex flex-col items-center">
-          <p className="text-neutral-lightTheme-veryDarkBlue dark:text-neutral-lightTheme-lightGrayishBlue text-6xl font-bold">
+          <p className="text-6xl font-bold text-neutral-lightTheme-veryDarkBlue dark:text-neutral-lightTheme-lightGrayishBlue">
             {utils.addK(followers)}
           </p>
-          <p className="text-neutral-lightTheme-darkGrayishBlue dark:text-neutral-darkTheme-desaturatedBlue text-lg uppercase tracking-widest">
+          <p className="text-lg uppercase tracking-widest text-neutral-lightTheme-darkGrayishBlue dark:text-neutral-darkTheme-desaturatedBlue">
             Followers
           </p>
         </div>
@@ -46,6 +47,17 @@ const SingleStat = ({ stat }) => {
       </div>
     </div>
   );
+};
+
+SingleStat.propTypes = {
+  stat: PropTypes.shape({
+    id: PropTypes.number,
+    media: PropTypes.string,
+    user: PropTypes.string,
+    followers: PropTypes.number,
+    newFollowers: PropTypes.number,
+    surplus: PropTypes.bool,
+  }).isRequired,
 };
 
 export default SingleStat;

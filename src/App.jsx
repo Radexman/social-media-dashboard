@@ -5,8 +5,8 @@ import StatsTotal from "./components/StatsTotal";
 import statsTotalData from "./data/stats-total";
 
 function App() {
-  const [theme, setTheme] = useState(localStorage.getItem("theme"));
   const [mainStats, setMainStats] = useState([]);
+  const [theme, setTheme] = useState(localStorage.getItem("theme"));
 
   useEffect(() => {
     setMainStats(statsTotalData);
@@ -21,7 +21,7 @@ function App() {
   };
 
   return (
-    <div className="bg-neutral-lightTheme-white dark:bg-neutral-darkTheme-veryDarkBlueBg min-h-screen">
+    <div className="min-h-screen bg-neutral-lightTheme-white dark:bg-neutral-darkTheme-veryDarkBlueBg">
       <Navbar handleThemeSwitch={handleThemeSwitch} mainStats={mainStats} />
       <StatsTotal mainStats={mainStats} />
     </div>

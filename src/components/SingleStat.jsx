@@ -5,7 +5,7 @@ const SingleStat = ({ stat }) => {
   const { media, user, followers, newFollowers, surplus } = stat;
 
   return (
-    <div className="single-stat-container">
+    <div className="single-main-stat-container">
       <div
         style={{
           background: utils.getBackgroundColor(media),

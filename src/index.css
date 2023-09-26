@@ -27,8 +27,12 @@ h1 {
   @apply grid grid-cols-1 gap-6 px-5 md:grid-cols-2 md:px-0 lg:grid-cols-4;
 }
 
-.single-stat-container {
+.single-main-stat-container {
   @apply h-56 rounded-lg bg-neutral-lightTheme-lightGrayishBlue dark:bg-neutral-darkTheme-darkDesaturatedBlue;
+}
+
+.single-today-stat-container {
+  @apply flex h-44 items-center justify-between rounded-lg bg-neutral-lightTheme-lightGrayishBlue p-6 dark:bg-neutral-darkTheme-darkDesaturatedBlue;
 }
 
 .user-name {

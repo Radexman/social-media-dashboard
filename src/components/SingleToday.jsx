@@ -1,5 +1,11 @@
 import PropTypes from "prop-types";
 import utils from "../utils/helpers";
+import iconDown from "../assets/images/icon-down.svg";
+import iconUp from "../assets/images/icon-up.svg";
+import facebookIcon from "../assets/images/icon-facebook.svg";
+import instagramIcon from "../assets/images/icon-instagram.svg";
+import twitterIcon from "../assets/images/icon-twitter.svg";
+import youtubeIcon from "../assets/images/icon-youtube.svg";
 
 const SingleToday = ({ stat }) => {
   const { media, activityType, followers, ratio, surplus } = stat;
@@ -16,17 +22,19 @@ const SingleToday = ({ stat }) => {
       </div>
       <div className="flex flex-col items-center gap-10">
         <img
-          src={`src/assets/images/icon-${media}.svg`}
+          src={utils.chooseImage(
+            media,
+            facebookIcon,
+            instagramIcon,
+            twitterIcon,
+            youtubeIcon,
+          )}
           className="w-5"
           alt={`${media} icon`}
         />
         <div className="mt-3 flex items-center gap-1">
           <img
-            src={
-              surplus
-                ? "src/assets/images/icon-up.svg"
-                : "src/assets/images/icon-down.svg"
-            }
+            src={surplus ? iconUp : iconDown}
             className="w-3"
             alt={surplus ? "Arrow Up" : "Arrow Down"}
           />

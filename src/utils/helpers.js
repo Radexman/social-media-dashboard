@@ -38,11 +38,25 @@ const addK = (number) => {
   }
 };
 
+const chooseImage = (media, mediaOne, mediaTwo, mediaThree, mediaFour) => {
+  switch (media) {
+    case "facebook":
+      return mediaOne;
+    case "instagram":
+      return mediaTwo;
+    case "twitter":
+      return mediaThree;
+    case "youtube":
+      return mediaFour;
+  }
+};
+
 const utils = {
   getBackgroundColor,
   checktheme,
   calculateFollowers,
   addK,
+  chooseImage,
 };
 
 export default utils;

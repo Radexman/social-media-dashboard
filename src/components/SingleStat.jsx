@@ -14,7 +14,10 @@ const SingleStat = ({ stat }) => {
       ></div>
       <div className="flex flex-col items-center space-y-5 p-4">
         <div className="flex gap-2">
-          <img src={`src/images/icon-${media}.svg`} alt={`${media} icon`} />
+          <img
+            src={`src/assets/images/icon-${media}.svg`}
+            alt={`${media} icon`}
+          />
           <p className="user-name">{user}</p>
         </div>
         <div className="flex flex-col items-center">
@@ -24,7 +27,9 @@ const SingleStat = ({ stat }) => {
         <div className="flex items-center gap-2">
           <img
             src={
-              surplus ? "src/images/icon-up.svg" : "src/images/icon-down.svg"
+              surplus
+                ? "src/assets/images/icon-up.svg"
+                : "src/assets/images/icon-down.svg"
             }
             className="w-3"
             alt={surplus ? "Arrow Up" : "Arrow Down"}

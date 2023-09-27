@@ -16,14 +16,16 @@ const SingleToday = ({ stat }) => {
       </div>
       <div className="flex flex-col items-center gap-10">
         <img
-          src={`src/images/icon-${media}.svg`}
+          src={`src/assets/images/icon-${media}.svg`}
           className="w-5"
           alt={`${media} icon`}
         />
         <div className="mt-3 flex items-center gap-1">
           <img
             src={
-              surplus ? "src/images/icon-up.svg" : "src/images/icon-down.svg"
+              surplus
+                ? "src/assets/images/icon-up.svg"
+                : "src/assets/images/icon-down.svg"
             }
             className="w-3"
             alt={surplus ? "Arrow Up" : "Arrow Down"}

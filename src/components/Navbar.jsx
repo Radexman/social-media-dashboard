@@ -1,7 +1,10 @@
-import PropTypes from "prop-types";
+import { useContext } from "react";
 import utils from "../utils/helpers";
+import { StatsContext } from "../context/StatsProvider";
 
-const Navbar = ({ handleThemeSwitch, mainStats }) => {
+const Navbar = () => {
+  const { handleThemeSwitch, mainStats } = useContext(StatsContext);
+
   return (
     <nav>
       <div className="navbar-inner-wrapper">
@@ -22,11 +25,6 @@ const Navbar = ({ handleThemeSwitch, mainStats }) => {
       </div>
     </nav>
   );
-};
-
-Navbar.propTypes = {
-  handleThemeSwitch: PropTypes.func.isRequired,
-  mainStats: PropTypes.array.isRequired,
 };
 
 export default Navbar;

@@ -5,6 +5,7 @@ import StatsTotal from "./components/StatsTotal";
 import StatsToday from "./components/StatsToday";
 import statsTotalData from "./data/stats-total";
 import statsTodayData from "./data/stats-today";
+import StatsProvider from "./context/StatsProvider";
 
 function App() {
   const [mainStats, setMainStats] = useState([]);
@@ -20,16 +21,14 @@ function App() {
     utils.checktheme(theme);
   }, [theme]);
 
-  const handleThemeSwitch = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
-
   return (
-    <div className="min-h-screen bg-neutral-lightTheme-white dark:bg-neutral-darkTheme-veryDarkBlueBg">
-      <Navbar handleThemeSwitch={handleThemeSwitch} mainStats={mainStats} />
-      <StatsTotal mainStats={mainStats} />
-      <StatsToday todayStats={todayStats} />
-    </div>
+    <StatsProvider>
+      <div className="min-h-screen bg-neutral-lightTheme-white dark:bg-neutral-darkTheme-veryDarkBlueBg">
+        <Navbar />
+        <StatsTotal />
+        <StatsToday todayStats={todayStats} />
+      </div>
+    </StatsProvider>
   );
 }
 

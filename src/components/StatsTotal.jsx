@@ -1,7 +1,10 @@
-import PropTypes from "prop-types";
+import { useContext } from "react";
+import { StatsContext } from "../context/StatsProvider";
 import SingleStat from "./SingleStat";
 
-const StatsTotal = ({ mainStats }) => {
+const StatsTotal = () => {
+  const { mainStats } = useContext(StatsContext);
+
   return (
     <div className="relative -top-12">
       <div className="container mx-auto">
@@ -16,9 +19,4 @@ const StatsTotal = ({ mainStats }) => {
   );
 };
 
-StatsTotal.propTypes = {
-  mainStats: PropTypes.array.isRequired,
-};
-
 export default StatsTotal;
-1;

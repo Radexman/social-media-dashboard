@@ -1,7 +1,10 @@
-import PropTypes from "prop-types";
+import { useContext } from "react";
+import { StatsContext } from "../context/StatsProvider";
 import SingleToday from "./SingleToday";
 
-const StatsToday = ({ todayStats }) => {
+const StatsToday = () => {
+  const { todayStats } = useContext(StatsContext);
+
   return (
     <div className="container mx-auto pb-20">
       <h2 className="mb-6 pl-5 text-2xl font-bold text-neutral-darkTheme-desaturatedBlue dark:text-neutral-lightTheme-veryPaleBlue md:pl-0">
@@ -15,10 +18,6 @@ const StatsToday = ({ todayStats }) => {
       </div>
     </div>
   );
-};
-
-StatsToday.propTypes = {
-  todayStats: PropTypes.array.isRequired,
 };
 
 export default StatsToday;
